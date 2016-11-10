@@ -1,0 +1,116 @@
+$icon-font-path: '../fonts/';
+
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+
+$background: #1c7084;
+$textColor: darken($background, 5%);;
+$headingColor: white;
+$buttonText: white;
+$article: white;
+
+.data {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: $background;
+  font-size:  18px;
+}
+
+html, body, #wiki-viewer {
+  height: 100%;
+}
+
+body {
+  padding: 60px 20px;
+  background: linear-gradient(rgba($background, 0.38), rgba($background, 0.38)), url('http://res.cloudinary.com/imagine393/image/upload/v1478448556/symphony_ptwc7o.png') fixed;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.flex-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+h1, h2, h3, h4 {  
+  color: $headingColor;
+}
+
+.content {
+  max-width: 100%;
+}
+.error p {
+  width: 620px;
+  max-width: 100%;
+  margin: 40px auto;
+  padding: 18px;
+  border-radius: 20px;
+  color: $textColor;
+  font-size: 20px;
+  text-align: center;
+  background: rgba($article, 0.4);
+}
+.article {
+  width: 800px;
+  max-width: 100%;
+  margin: 40px auto;
+  &:last-child {
+    margin-bottom: 60px;
+  }
+  cursor: pointer;
+  a {
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: $textColor;
+    font-size: 20px;
+    span {
+      font-size: 16px;
+    }
+    background: rgba($article, 0.4);
+    padding: 18px;
+    border-radius: 20px;
+    &:hover {
+      text-decoration: none;
+      background: rgba($article, 0.55);
+    }
+  }
+}
+
+.btn:focus, .btn:active:focus {
+  outline: none;
+}
+
+.btn.special.btn-default {
+  background: $background;
+  border: none;
+  color: white;
+  font-size: 20px;
+  &:first-child {
+    margin-bottom: 40px;
+  } 
+  &:hover {
+    background: darken($background, 5%);
+  }
+}
+
+.inputs {
+  display: block;
+  margin: 0 auto;
+  width: 320px;
+  button {
+    float: right;
+  }
+}
+
+.form-group {
+  width: 260px;
+  float: left;
+}
+
+input[type="text"] {
+  font-size: 18px;
+  height: 40px;
+}
